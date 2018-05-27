@@ -1,0 +1,13 @@
+version: '2.1'
+
+services:
+  app:
+    image: sentiment-viewer
+    build: .
+    ports:
+      - "3000:3000"
+    #depends_on:
+    #  db:
+    #    condition: service_healthy
+    #links:
+    #  - db
