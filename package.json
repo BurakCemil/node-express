@@ -10,13 +10,17 @@
     "type": "git",
     "url": "git+https://github.com/tech4242/sentiment-viewer.git"
   },
-  "author": "",
+  "author": "Nikolay Dimolarov",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/tech4242/sentiment-viewer/issues"
   },
   "homepage": "https://github.com/tech4242/sentiment-viewer#readme",
   "dependencies": {
-    "express": "^4.16.3"
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3",
+    "jsonwebtoken": "^8.2.1",
+    "mongoose": "^5.1.2"
   }
 }
