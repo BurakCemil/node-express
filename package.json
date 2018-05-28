@@ -1,6 +1,6 @@
 {
-  "name": "sentiment-viewer",
-  "version": "1.0.0",
+  "name": "node-express",
+  "version": "0.1",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/tech4242/sentiment-viewer.git"
+    "url": "git+https://github.com/tech4242/node-express.git"
   },
   "author": "Nikolay Dimolarov",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/tech4242/sentiment-viewer/issues"
+    "url": "https://github.com/tech4242/node-express/issues"
   },
-  "homepage": "https://github.com/tech4242/sentiment-viewer#readme",
+  "homepage": "https://github.com/tech4242/node-express#readme",
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.18.3",
