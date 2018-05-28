@@ -2,7 +2,7 @@ version: '2.1'
 
 services:
   app:
-    image: sentiment-viewer
+    image: node-express
     build: .
     volumes:
       - .:/build
