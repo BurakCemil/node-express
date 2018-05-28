@@ -4,12 +4,18 @@ const passport = require('passport'),
       BearerStrategy = require('passport-http-bearer').Strategy,
       User = require('../models/User');
 
-passport.use(new BearerStrategy(function (token, cb) {
-  jwt.verify(token, secret, function(err, decoded) {
-    if (err) return cb(err);
-    var user = users[decoded.id];
-    return cb(null, user ? user : false);
-  });
-}));
+passport.use(
+  new BearerStrategy((token, cb) => {
+    jwt.verify(token, 'secret', function(err, decoded) {
+      if (err) return cb(err);
+      User.findById(
+        decoded.id,
+        (err, user) => {
+          if (err) { return cb(err); }
+          cb(null, user);
+        });
+    });
+  })
+);
 
 module.exports = passport;

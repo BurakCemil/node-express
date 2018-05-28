@@ -24,8 +24,8 @@ exports.register = (req, res) => {
 };
 
 exports.auth = (req, res) => {
-  User.findOne({
-    'username': req.body.username },
+  User.findOne(
+    { 'username': req.body.username },
     '_id username fullName email password createdAt',
     (err, user) => {
       if (err) { return res.status(500).send(err); }
