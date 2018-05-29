@@ -3,7 +3,7 @@ A Node.js/Express + Mongoose + Docker RESTful affair
 
 ## Introduction
 
-While this express train can't take you to Hogwarts (sorry), it should give you, an aspiring web developer, a quick overview of how to build RESTful APIs with (hopefully) the least amount of middleware and callback hell with fancy ES6 (and ES7?) icing and sprinkles.
+While this express train can't take you to Hogwarts (sorry), it should give you, an aspiring web developer, a quick overview of how to build RESTful APIs with (hopefully) the least amount of middleware and callback hell with fancy ES6 and ES7 icing and sprinkles (async/await, Promises, arrow functions etc.).
 
 ## The Setup
 
