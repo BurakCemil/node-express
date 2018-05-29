@@ -1,5 +1,5 @@
 # node-express
-A Node.js/Express + Mongoose + Docker RESTful affair
+ A Node.js & Express + Mongoose + Docker RESTful affair
 
 ## Introduction
 
