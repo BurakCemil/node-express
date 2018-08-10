@@ -12,7 +12,7 @@ Here are the basics:
 
 * Docker: docker-compose with a custom Alpine Node.js container with `nodemon` to allow for faster development and a standard MongoDB container. `docker-compose up --build` to get started and Google.com if you don't know what I am talking about. Currently docker-compose is mounting this directory, which allows for instant code changes to be registered together with nodemon!
 
-* **Don't use this setup in production!** This setup has been created for fast development. A separate Docker setup is needed for production depending on your requirements, which can vary immensely. Especially valid for the missing env. variables for the DB auth etc. Furthermore the current error messages for the login are too verbose and allow user enumeration - you should always return a generic error message when login was unsuccessful.
+* **Don't use this setup in production!** This setup has been created for fast development. A separate Docker setup is needed for production depending on your requirements, which can vary immensely. Especially valid for the missing env. variables for the DB auth etc. Furthermore the current error messages for the login are too verbose and allow user enumeration - you should always return a generic error message when login was unsuccessful - my idea here was to show you what errors you should catch.
 
 
 ## Open todos
