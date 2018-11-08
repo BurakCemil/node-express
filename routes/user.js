@@ -1,15 +1,14 @@
-const express = require('express'),
-      bodyParser = require('body-parser'),
-      passport = require('passport');
+import express from "express"
+import bodyParser from "body-parser"
+import passport from "passport"
+import { register, authUser, test } from "../controllers/userController"
 
-const router = express.Router();
-router.use(bodyParser.urlencoded({ extended: false }));
-router.use(bodyParser.json());
+const router = express.Router()
+router.use(bodyParser.urlencoded({ extended: false }))
+router.use(bodyParser.json())
 
-const userController = require('../controllers/userController');
+router.post("/register", register)
+router.post("/auth", authUser)
+router.get("/test", /*passport.authenticate("bearer", { session: false }),*/ test)
 
-router.post('/register', userController.register);
-router.post('/auth', userController.auth);
-router.get('/test', passport.authenticate('bearer', { session: false }), userController.test);
-
-module.exports = router;
+export default router

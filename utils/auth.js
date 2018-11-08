@@ -1,12 +1,13 @@
-const jwt = require('jsonwebtoken'),
-      bcrypt = require('bcryptjs');
+import bcrypt from "bcryptjs"
 
-exports.unhashPassword = async (password, hash) => {
-  const unhashedPassword = await new Promise((resolve, reject) => {
-    bcrypt.compare(password, hash, (err, hash) => {
-      if (err) reject(error);
-      if (!res) reject("Wrong password.");
-      if (res) resolve(true);
-    });
-  });
-};
+export const unhashPassword = async (password, hash) => {
+	const unhashedPassword = await new Promise((resolve, reject) => {
+		bcrypt.compare(password, hash, (err, res) => {
+			if (err) reject(err)
+			if (!res) reject("Wrong password.")
+			if (res) resolve(true)
+		})
+	}).then(() => {
+		return unhashedPassword
+	})
+}
