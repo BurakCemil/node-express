@@ -1,4 +1,4 @@
-import * as dotenv from "dotenv"
+import dotenv from "dotenv"
 import convict from "convict"
 import { logger } from "./log"
 
@@ -8,9 +8,7 @@ if (result.error) {
 	logger.error(`Error loading env configuration: ${result.error}`)
 }
 
-// Boilerplate config schema
-
-export const config = convict({
+const config = convict({
 	accountSid: {
 		default: undefined,
 		env: "ACCOUNT_SID",
@@ -36,3 +34,5 @@ export const config = convict({
 config.validate({
 	allowed: "strict"
 })
+
+export default config.getProperties()
