@@ -1,7 +1,7 @@
 import express from "express"
 import cors from "cors"
 import passport from "./utils/passport"
-// import db from "./utils/db"
+import db from "./utils/db"
 import userRoute from "./routes/user"
 
 import config from "./utils/config"

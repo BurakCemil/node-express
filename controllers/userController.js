@@ -7,6 +7,7 @@ import User from "../models/User"
 export const register = (req, res) => {
 	console.log(req.body)
 	const hashedPassword = bcrypt.hashSync(req.body.password, 8)
+	console.log(`Hashed password: ${hashedPassword}`)
 	User.create({
 		fullName : req.body.fullName,
 		email : req.body.email,
