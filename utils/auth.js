@@ -1,6 +1,6 @@
 import bcrypt from "bcryptjs"
 
-export const unhashPassword = async (password, hash) => {
+const unhashPassword = async (password, hash) => {
 	const unhashedPassword = await new Promise((resolve, reject) => {
 		bcrypt.compare(password, hash, (err, res) => {
 			if (err) reject(err)
@@ -11,3 +11,5 @@ export const unhashPassword = async (password, hash) => {
 		return unhashedPassword
 	})
 }
+
+export default unhashPassword

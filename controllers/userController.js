@@ -1,7 +1,7 @@
 import bcrypt from "bcryptjs"
 import jwt from "jsonwebtoken"
 import User from "../models/User"
-// import auth from "../utils/auth"
+import auth from "../utils/auth"
 
 
 export const register = (req, res) => {
@@ -26,7 +26,7 @@ export const register = (req, res) => {
 export const authUser = async (req, res) => {
 	try {
 		const user = await User.findOne({ "username": req.body.username }, "_id username fullName email password createdAt")
-		// const unhashedPassword = await auth.unhashPassword(req.body.password, user.password)
+		const unhashedPassword = await auth(req.body.password, user.password)
 		const token = await jwt.sign({ id: user._id }, "secret", {
 			expiresIn: 86400 // expires in 24 hours
 		})
